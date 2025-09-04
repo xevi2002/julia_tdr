@@ -1,0 +1,200 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Evaluación</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="bg-white p-8 rounded-lg shadow-lg max-w-2xl w-full">
+    <h1 class="text-2xl font-bold mb-6 text-center">Formulario de Evaluación</h1>
+    <form id="evaluationForm" action="https://formspree.io/f/tu-id-unico" method="POST">
+      <!-- Campo para el correo electrónico del usuario -->
+      <div class="mb-6">
+        <label for="email" class="font-semibold">Tu correo electrónico (opcional):</label>
+        <input type="email" id="email" name="email" class="w-full p-2 border rounded mt-2" placeholder="Ingresa tu correo">
+      </div>
+      <!-- Pregunta 1 -->
+      <div class="mb-6">
+        <p class="font-semibold">1. ¿Cómo calificarías la calidad del producto? (1-5)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q1" value="1" required> 1</label>
+          <label><input type="radio" name="q1" value="2"> 2</label>
+          <label><input type="radio" name="q1" value="3"> 3</label>
+          <label><input type="radio" name="q1" value="4"> 4</label>
+          <label><input type="radio" name="q1" value="5"> 5</label>
+        </div>
+      </div>
+      <!-- Pregunta 2 -->
+      <div class="mb-6">
+        <p class="font-semibold">2. ¿El producto cumplió tus expectativas? (1-5)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q2" value="1" required> 1</label>
+          <label><input type="radio" name="q2" value="2"> 2</label>
+          <label><input type="radio" name="q2" value="3"> 3</label>
+          <label><input type="radio" name="q2" value="4"> 4</label>
+          <label><input type="radio" name="q2" value="5"> 5</label>
+        </div>
+      </div>
+      <!-- Pregunta 3 -->
+      <div class="mb-6">
+        <p class="font-semibold">3. ¿Recomendarías este producto a otros? (1-5)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q3" value="1" required> 1</label>
+          <label><input type="radio" name="q3" value="2"> 2</label>
+          <label><input type="radio" name="q3" value="3"> 3</label>
+          <label><input type="radio" name="q3" value="4"> 4</label>
+          <label><input type="radio" name="q3" value="5"> 5</label>
+        </div>
+      </div>
+      <!-- Pregunta 4 -->
+      <div class="mb-6">
+        <p class="font-semibold">4. ¿Qué tan fácil fue usar el producto? (1-5)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q4" value="1" required> 1</label>
+          <label><input type="radio" name="q4" value="2"> 2</label>
+          <label><input type="radio" name="q4" value="3"> 3</label>
+          <label><input type="radio" name="q4" value="4"> 4</label>
+          <label><input type="radio" name="q4" value="5"> 5</label>
+        </div>
+      </div>
+      <!-- Pregunta 5 -->
+      <div class="mb-6">
+        <p class="font-semibold">5. ¿El precio del producto es adecuado? (1-5)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q5" value="1" required> 1</label>
+          <label><input type="radio" name="q5" value="2"> 2</label>
+          <label><input type="radio" name="q5" value="3"> 3</label>
+          <label><input type="radio" name="q5" value="4"> 4</label>
+          <label><input type="radio" name="q5" value="5"> 5</label>
+        </div>
+      </div>
+      <!-- Pregunta 6 -->
+      <div class="mb-6">
+        <p class="font-semibold">6. ¿Qué tan satisfecho estás con el soporte al cliente? (0-100)</p>
+        <input type="number" name="q6" min="0" max="100" required class="w-full p-2 border rounded mt-2" placeholder="Ingresa un valor de 0 a 100">
+      </div>
+      <!-- Pregunta 7 -->
+      <div class="mb-6">
+        <p class="font-semibold">7. ¿El producto es innovador? (0-100)</p>
+        <input type="number" name="q7" min="0" max="100" required class="w-full p-2 border rounded mt-2" placeholder="Ingresa un valor de 0 a 100">
+      </div>
+      <!-- Pregunta 8 -->
+      <div class="mb-6">
+        <p class="font-semibold">8. ¿Qué tan duradero parece el producto? (0-100)</p>
+        <input type="number" name="q8" min="0" max="100" required class="w-full p-2 border rounded mt-2" placeholder="Ingresa un valor de 0 a 100">
+      </div>
+      <!-- Pregunta 9 -->
+      <div class="mb-6">
+        <p class="font-semibold">9. ¿El diseño del producto es atractivo? (0-100)</p>
+        <input type="number" name="q9" min="0" max="100" required class="w-full p-2 border rounded mt-2" placeholder="Ingresa un valor de 0 a 100">
+      </div>
+      <!-- Pregunta 10 -->
+      <div class="mb-6">
+        <p class="font-semibold">10. ¿Volverías a comprar este producto? (0-100)</p>
+        <input type="number" name="q10" min="0" max="100" required class="w-full p-2 border rounded mt-2" placeholder="Ingresa un valor de 0 a 100">
+      </div>
+      <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">Enviar Evaluación</button>
+    </form>
+    <div id="result" class="mt-6 text-center hidden">
+      <h2 class="text-xl font-semibold">Resultado</h2>
+      <p id="score" class="text-lg"></p>
+      <p id="feedback" class="mt-2"></p>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    async function loadPyodideAndRun() {
+      let pyodide = await loadPyodide();
+      await pyodide.runPythonAsync(`
+        from js import document, alert
+        from pyodide.ffi import create_proxy
+
+        def calculate_score(event):
+            total_score = 0
+
+            # Sumar puntuaciones de las preguntas 1 a 5 (radio buttons, 1-5)
+            for i in range(1, 6):
+                selected = document.querySelector(f'input[name="q{i}"]:checked')
+                if selected:
+                    total_score += int(selected.value)
+
+            # Sumar puntuaciones de las preguntas 6 a 10 (campos numéricos, 0-100)
+            for i in range(6, 11):
+                input_field = document.querySelector(f'input[name="q{i}"]')
+                value = int(input_field.value or 0)
+                if value < 0 or value > 100:
+                    alert(f"Por favor, ingresa un valor válido (0-100) para la pregunta {i}.")
+                    event.preventDefault()
+                    return
+                total_score += value
+
+            # Actualizar el DOM con los resultados
+            result_div = document.getElementById('result')
+            score_element = document.getElementById('score')
+            feedback_element = document.getElementById('feedback')
+
+            score_element.textContent = f"Puntuación total: {total_score} / 525"
+
+            if total_score >= 420:
+                feedback = "¡Excelente! Estás muy satisfecho con el producto."
+            elif total_score >= 315:
+                feedback = "Buen resultado, pero hay áreas que podrían mejorar."
+            elif total_score >= 210:
+                feedback = "Satisfacción moderada. Considera proporcionar retroalimentación detallada."
+            else:
+                feedback = "Parece que no estás muy satisfecho. Por favor, comparte tus comentarios."
+            feedback_element.textContent = feedback
+
+            result_div.classList.remove('hidden')
+
+        # Vincular la función calculate_score al evento submit del formulario
+        form = document.getElementById('evaluationForm')
+        form.addEventListener('submit', create_proxy(calculate_score))
+      `);
+    }
+    loadPyodideAndRun();
+  </script>
+</body>
+</html>
