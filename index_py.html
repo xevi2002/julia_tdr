@@ -55,85 +55,186 @@
         <label for="email" class="font-semibold">Tu correo electrónico (opcional):</label>
         <input type="email" id="email" name="email" class="w-full p-2 border rounded mt-2" placeholder="Ingresa tu correo">
       </div>
-      <!-- Pregunta 1 -->
+      <!-- Q1: Edad -->
       <div class="mb-6">
-        <p class="font-semibold">1. ¿Cómo calificarías la calidad del producto? (1-5)</p>
+        <p class="font-semibold">1. ¿Cuántos años tiene actualmente? (0-110)</p>
+        <input type="number" name="q1" min="0" max="110" required class="w-full p-2 border rounded mt-2" placeholder="Ingresa tu edad">
+      </div>
+      <!-- Q2: Horas de sueño -->
+      <div class="mb-6">
+        <p class="font-semibold">2. ¿Cuántas horas diarias duerme? (0-24)</p>
+        <input type="number" name="q2" min="0" max="24" required class="w-full p-2 border rounded mt-2" placeholder="Horas de sueño">
+      </div>
+      <!-- Q3: Horari de son -->
+      <div class="mb-6">
+        <p class="font-semibold">3. ¿Sigue un horario para dormir unas horas adecuadas? (SÍ/NO)</p>
         <div class="flex space-x-4 mt-2">
-          <label><input type="radio" name="q1" value="1" required> 1</label>
-          <label><input type="radio" name="q1" value="2"> 2</label>
-          <label><input type="radio" name="q1" value="3"> 3</label>
-          <label><input type="radio" name="q1" value="4"> 4</label>
-          <label><input type="radio" name="q1" value="5"> 5</label>
+          <label><input type="radio" name="q3" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q3" value="NO"> NO</label>
         </div>
       </div>
-      <!-- Pregunta 2 -->
+      <!-- Q4: Dormir a les fosques -->
       <div class="mb-6">
-        <p class="font-semibold">2. ¿El producto cumplió tus expectativas? (1-5)</p>
+        <p class="font-semibold">4. ¿Suele dormir a oscuras? (SÍ/NO)</p>
         <div class="flex space-x-4 mt-2">
-          <label><input type="radio" name="q2" value="1" required> 1</label>
-          <label><input type="radio" name="q2" value="2"> 2</label>
-          <label><input type="radio" name="q2" value="3"> 3</label>
-          <label><input type="radio" name="q2" value="4"> 4</label>
-          <label><input type="radio" name="q2" value="5"> 5</label>
+          <label><input type="radio" name="q4" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q4" value="NO"> NO</label>
         </div>
       </div>
-      <!-- Pregunta 3 -->
+      <!-- Q5: Pantalla abans de dormir -->
       <div class="mb-6">
-        <p class="font-semibold">3. ¿Recomendarías este producto a otros? (1-5)</p>
+        <p class="font-semibold">5. ¿Suele tener el hábito de mirar una pantalla antes de dormir? (SÍ/NO)</p>
         <div class="flex space-x-4 mt-2">
-          <label><input type="radio" name="q3" value="1" required> 1</label>
-          <label><input type="radio" name="q3" value="2"> 2</label>
-          <label><input type="radio" name="q3" value="3"> 3</label>
-          <label><input type="radio" name="q3" value="4"> 4</label>
-          <label><input type="radio" name="q3" value="5"> 5</label>
+          <label><input type="radio" name="q5" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q5" value="NO"> NO</label>
         </div>
       </div>
-      <!-- Pregunta 4 -->
+      <!-- Q6: Hores davant pantalla -->
       <div class="mb-6">
-        <p class="font-semibold">4. ¿Qué tan fácil fue usar el producto? (1-5)</p>
+        <p class="font-semibold">6. ¿Cuál es su promedio de horas diarias frente a una pantalla? (0-24)</p>
+        <input type="number" name="q6" min="0" max="24" required class="w-full p-2 border rounded mt-2" placeholder="Horas frente a pantalla">
+      </div>
+      <!-- Q7: Exercici setmanal -->
+      <div class="mb-6">
+        <p class="font-semibold">7. ¿Hace ejercicio al menos dos veces por semana? (SÍ/NO)</p>
         <div class="flex space-x-4 mt-2">
-          <label><input type="radio" name="q4" value="1" required> 1</label>
-          <label><input type="radio" name="q4" value="2"> 2</label>
-          <label><input type="radio" name="q4" value="3"> 3</label>
-          <label><input type="radio" name="q4" value="4"> 4</label>
-          <label><input type="radio" name="q4" value="5"> 5</label>
+          <label><input type="radio" name="q7" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q7" value="NO"> NO</label>
         </div>
       </div>
-      <!-- Pregunta 5 -->
+      <!-- Q8: Hores d'exercici -->
       <div class="mb-6">
-        <p class="font-semibold">5. ¿El precio del producto es adecuado? (1-5)</p>
+        <p class="font-semibold">8. ¿Cuántas horas a la semana hace ejercicio físico? (0-24)</p>
+        <input type="number" name="q8" min="0" max="24" required class="w-full p-2 border rounded mt-2" placeholder="Horas de ejercicio">
+      </div>
+      <!-- Q9: Esforç físic -->
+      <div class="mb-6">
+        <p class="font-semibold">9. ¿Reconoce hacer algún esfuerzo físico intenso semanalmente? (SÍ/NO)</p>
         <div class="flex space-x-4 mt-2">
-          <label><input type="radio" name="q5" value="1" required> 1</label>
-          <label><input type="radio" name="q5" value="2"> 2</label>
-          <label><input type="radio" name="q5" value="3"> 3</label>
-          <label><input type="radio" name="q5" value="4"> 4</label>
-          <label><input type="radio" name="q5" value="5"> 5</label>
+          <label><input type="radio" name="q9" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q9" value="NO"> NO</label>
         </div>
       </div>
-      <!-- Pregunta 6 -->
+      <!-- Q10: Esforç mental -->
       <div class="mb-6">
-        <p class="font-semibold">6. ¿Qué tan satisfecho estás con el soporte al cliente? (0-100)</p>
-        <input type="number" name="q6" min="0" max="100" required class="w-full p-2 border rounded mt-2" placeholder="Ingresa un valor de 0 a 100">
+        <p class="font-semibold">10. ¿Entrena la mente, estudia o hace algún esfuerzo mental diariamente? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q10" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q10" value="NO"> NO</label>
+        </div>
       </div>
-      <!-- Pregunta 7 -->
+      <!-- Q11: Menja verdura -->
       <div class="mb-6">
-        <p class="font-semibold">7. ¿El producto es innovador? (0-100)</p>
-        <input type="number" name="q7" min="0" max="100" required class="w-full p-2 border rounded mt-2" placeholder="Ingresa un valor de 0 a 100">
+        <p class="font-semibold">11. ¿Come mucha verdura? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q11" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q11" value="NO"> NO</label>
+        </div>
       </div>
-      <!-- Pregunta 8 -->
+      <!-- Q12: Menja carn -->
       <div class="mb-6">
-        <p class="font-semibold">8. ¿Qué tan duradero parece el producto? (0-100)</p>
-        <input type="number" name="q8" min="0" max="100" required class="w-full p-2 border rounded mt-2" placeholder="Ingresa un valor de 0 a 100">
+        <p class="font-semibold">12. ¿Cuántas veces a la semana come carne? (1-10)</p>
+        <input type="number" name="q12" min="1" max="10" required class="w-full p-2 border rounded mt-2" placeholder="Veces que come carne">
       </div>
-      <!-- Pregunta 9 -->
+      <!-- Q13: Làctics i probiòtics -->
       <div class="mb-6">
-        <p class="font-semibold">9. ¿El diseño del producto es atractivo? (0-100)</p>
-        <input type="number" name="q9" min="0" max="100" required class="w-full p-2 border rounded mt-2" placeholder="Ingresa un valor de 0 a 100">
+        <p class="font-semibold">13. ¿Suele consumir lácteos y probióticos? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q13" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q13" value="NO"> NO</label>
+        </div>
       </div>
-      <!-- Pregunta 10 -->
+      <!-- Q14: Àpats al dia -->
       <div class="mb-6">
-        <p class="font-semibold">10. ¿Volverías a comprar este producto? (0-100)</p>
-        <input type="number" name="q10" min="0" max="100" required class="w-full p-2 border rounded mt-2" placeholder="Ingresa un valor de 0 a 100">
+        <p class="font-semibold">14. ¿Cuántos comidas al día suele hacer? (1-5)</p>
+        <input type="number" name="q14" min="1" max="5" required class="w-full p-2 border rounded mt-2" placeholder="Número de comidas">
+      </div>
+      <!-- Q15: Quedar-se tip -->
+      <div class="mb-6">
+        <p class="font-semibold">15. ¿Suele quedarse muy lleno después de una comida? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q15" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q15" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q16: Aliments processats -->
+      <div class="mb-6">
+        <p class="font-semibold">16. ¿Come muchos alimentos procesados o comida rápida? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q16" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q16" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q17: Pes -->
+      <div class="mb-6">
+        <p class="font-semibold">17. ¿Cuánto pesa en kg? (0-150)</p>
+        <input type="number" name="q17" min="0" max="150" required class="w-full p-2 border rounded mt-2" placeholder="Peso en kg">
+      </div>
+      <!-- Q18: Alçada -->
+      <div class="mb-6">
+        <p class="font-semibold">18. ¿Qué altura tiene en cm? (0-240)</p>
+        <input type="number" name="q18" min="0" max="240" required class="w-full p-2 border rounded mt-2" placeholder="Altura en cm">
+      </div>
+      <!-- Q19: Diabetis -->
+      <div class="mb-6">
+        <p class="font-semibold">19. ¿Tiene algún tipo de diabetes? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q19" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q19" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q20: Problemes respiratoris o cardíacs -->
+      <div class="mb-6">
+        <p class="font-semibold">20. ¿Tiene algún problema respiratorio o cardíaco? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q20" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q20" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q21: Càncer o malaltia -->
+      <div class="mb-6">
+        <p class="font-semibold">21. ¿Padece algún cáncer o enfermedad? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q21" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q21" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q22: Antibiòtics -->
+      <div class="mb-6">
+        <p class="font-semibold">22. ¿Utiliza mucho los antibióticos? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q22" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q22" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q23: Visites al metge -->
+      <div class="mb-6">
+        <p class="font-semibold">23. ¿Cada cuánto suele ir al médico o hacer alguna revisión? (0-12)</p>
+        <input type="number" name="q23" min="0" max="12" required class="w-full p-2 border rounded mt-2" placeholder="Visitas al año">
+      </div>
+      <!-- Q24: Higiene -->
+      <div class="mb-6">
+        <p class="font-semibold">24. ¿Mantiene una buena higiene y sus espacios habituales suelen estar limpios? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q24" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q24" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q25: Positivisme -->
+      <div class="mb-6">
+        <p class="font-semibold">25. ¿Suele ser positivo y ver el vaso medio lleno? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q25" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q25" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q26: Angoixa o depressió -->
+      <div class="mb-6">
+        <p class="font-semibold">26. ¿Padece ansiedad o depresión? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q26" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q26" value="NO"> NO</label>
+        </div>
       </div>
       <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">Enviar Evaluación</button>
     </form>
