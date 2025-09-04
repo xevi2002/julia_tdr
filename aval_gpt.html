@@ -261,9 +261,9 @@
       const edat=Number(f.get("edat"));
       if(edat){
         if(edat>=19) score+=4; 
-        else if(edat>=20&&edat<=34) score+=3; 
-        else if(edat>=35&&edat<=50) score+=2; 
-        else if(edat>=51&&edat<=75) score+=1;}
+        else if(edat>=20&&edat<=34){ score+=3;} 
+        else if(edat>=35&&edat<=50){ score+=2;}
+        else if(edat>=51&&edat<=75){ score+=1;}}
       const hDormir=Number(f.get("horesDormir"));
       if(hDormir){ 
         if(edat>12){
@@ -274,11 +274,14 @@
           else if tips.push("Intenta dormir entre 9 i 10 hores."); }
       }
       const horariDormir=f.get("horariDormir");
-      if(horariDormir==="Sí"){ score+=1; } else if(horariDormir==="No"){ tips.push("Intenta tenir una regularitat a l'hora d'anar a dormir."); }
+      if(horariDormir==="Sí"){ score+=1; } 
+      else if(horariDormir==="No"){ tips.push("Intenta tenir una regularitat a l'hora d'anar a dormir."); }
       const dormirFosques=f.get("dormirFosques");
-      if(dormirFosques==="Sí"){ score+=2; } else if(dormirFosques==="No"){ tips.push("Intenta dormir a les fosques per millorar la qualitat del son."); }
+      if(dormirFosques==="Sí"){ score+=2; } 
+      else if(dormirFosques==="No"){ tips.push("Intenta dormir a les fosques per millorar la qualitat del son."); }
       const usPantalla=f.get("usPantalla");
-      if(usPantalla==="Sí"){ score-=1; } else if(usPantalla==="No"){ score +=3; }
+      if(usPantalla==="Sí"){ score-=1; } 
+      else if(usPantalla==="No"){ score +=3; }
       const horesPantalla=Number(f.get("horesPantalla"));
       if(horesPantalla){ 
         if(horesPantalla>0 && horesPantalla<2){ score+=3;}
@@ -287,49 +290,62 @@
       }
       const dosExercici=f.get("dosExercici");
       if(dosExercici==="Sí"){ score+=1; } else if(dosExercici==="No"){ tips.push("Intenti fer dues vegades la setmana exercici."); }
-      const dosExercici=Number(f.get("horesExercici"));
+      const horesExercici=Number(f.get("horesExercici"));
       if(horesExercici){ 
         if(horesExercici>=2 && horesExercici<=4){ score+=3;}
         else if(horesPantalla>4){ score+=2;}
         else if(horesPantalla<=1){ tips.push("És recomanable fer més hores d'exercici a la setmana");}
       }
       const classeEsforc=f.get("classeEsforc");
-      if(classeEsforc==="Sí"){ score+=2; } else if(usPantalla==="No"){ score +=0; }
+      if(classeEsforc==="Sí"){ score+=2; } 
+      else if(usPantalla==="No"){ score +=0; }
       const entrenaMent=f.get("entrenaMent");
-      if(entrenaMent==="Sí"){ score+=2; } else if(entrenaMent==="No"){ score +=0; }
+      if(entrenaMent==="Sí"){ score+=2; } 
+      else if(entrenaMent==="No"){ score +=0; }
       const menjaVerdura=f.get("menjaVerdura");
-      if(menjaVerdura==="Sí"){ score+=2; } else if(menjaVerdura==="No"){ score +=0; }
+      if(menjaVerdura==="Sí"){ score+=2; } 
+      else if(menjaVerdura==="No"){ score +=0; }
       const vegadesCarn=Number(f.get("vegadesCarn"));
       if(vegadesCarn<=2){ score+=2; } 
       else if(vegadesCarn>2){ score +=0; tips.push("És recomanable només menjar carn dues vegades la setmana com a màxim");}
       const consLact=f.get("consLact");
-      if(consLact==="Sí"){ score+=4; } else if(consLact==="No"){ score +=0; }
+      if(consLact==="Sí"){ score+=4; } 
+      else if(consLact==="No"){ score +=0; }
       const numApats=Number(f.get("numApats"));
       if(numApats>=3){ score+=2; } 
       else if(numApats<3){ score +=0; tips.push("És recomanable fer més apats en poca quantitat que menys amb molta quantitat");}
       const moltTip=f.get("moltTip");
-      if(moltTip==="Sí"){ score+=0; } else if(moltTip==="No"){ score +=1; }
+      if(moltTip==="Sí"){ score+=0; } 
+      else if(moltTip==="No"){ score +=1; }
       const alimProc=f.get("alimProc");
-      if(alimProc==="Sí"){ score-=1; } else if(alimProc==="No"){ score +=1; }
+      if(alimProc==="Sí"){ score-=1; } 
+      else if(alimProc==="No"){ score +=1; }
       const diabetis=f.get("diabetis");
-      if(diabetis==="Sí"){ score-=3; } else if(diabetis==="No"){ score +=0; }
+      if(diabetis==="Sí"){ score-=3; } 
+      else if(diabetis==="No"){ score +=0; }
       const respCard=f.get("respCard");
-      if(respCard==="Sí"){ score-=1; } else if(respCard==="No"){ score +=0; }
+      if(respCard==="Sí"){ score-=1; } 
+      else if(respCard==="No"){ score +=0; }
       const cancer=f.get("cancer");
-      if(cancer==="Sí"){ score-=3; } else if(cancer==="No"){ score +=0; }
+      if(cancer==="Sí"){ score-=3; } 
+      else if(cancer==="No"){ score +=0; }
       const antiBio=f.get("antiBio");
-      if(antiBio==="Sí"){ score-=1; } else if(antiBio==="No"){ score +=1; }
+      if(antiBio==="Sí"){ score-=1; } 
+      else if(antiBio==="No"){ score +=1; }
       const numRev=Number(f.get("numRev"));
       if(numRev){ 
         if(numRev>=2 ){ score+=2;}
         else if(numRev<2){ score+=0;}
       }
       const higiene=f.get("higiene");
-      if(higiene==="Sí"){ score+=1; } else if(higiene==="No"){ score +=0; }
+      if(higiene==="Sí"){ score+=1; } 
+      else if(higiene==="No"){ score +=0; }
       const positiu=f.get("positiu");
-      if(positiu==="Sí"){ score+=2; } else if(positiu==="No"){ score +=0; }
+      if(positiu==="Sí"){ score+=2; } 
+      else if(positiu==="No"){ score +=0; }
       const angoixa=f.get("angoixa");
-      if(angoixa==="Sí"){ score-=0; } else if(angoixa==="No"){ score +=1; }
+      if(angoixa==="Sí"){ score-=0; } 
+      else if(angoixa==="No"){ score +=1; }
 
       const pes=Number(f.get("pes"));
       const alcada=Number(f.get("alcada"));
