@@ -46,7 +46,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js"></script>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+<body class="bg-gray-100 flex items-center justify-center">
   <div class="bg-white p-8 rounded-lg shadow-lg max-w-2xl w-full">
     <h1 class="text-2xl font-bold mb-6 text-center">Formulario de Evaluación</h1>
     <form id="evaluationForm" action="https://formspree.io/f/tu-id-unico" method="POST">
@@ -228,14 +228,14 @@
           <label><input type="radio" name="q25" value="NO"> NO</label>
         </div>
       </div>
-      <!-- Q26: Angoixa o depressió 
+      <!-- Q26: Angoixa o depressió -->
       <div class="mb-6">
       <p class="font-semibold">26. ¿Padece ansiedad o depresión? (SÍ/NO)</p>
         <div class="flex space-x-4 mt-2">
           <label><input type="radio" name="q26" value="SÍ" required> SÍ</label>
           <label><input type="radio" name="q26" value="NO"> NO</label>
         </div>
-      </div> -->
+      </div>
       <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">Enviar Evaluación</button>
     </form>
     <div id="result" class="mt-6 text-center hidden">
