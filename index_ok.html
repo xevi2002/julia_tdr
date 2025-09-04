@@ -47,8 +47,8 @@
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
   <div class="bg-white p-8 rounded-lg shadow-lg max-w-2xl w-full">
-    <h1 class="text-2xl font-bold mb-6 text-center">Formulario de Evaluación de Salud</h1>
-    <form id="evaluationForm" action="https://formspree.io/f/tu-id-unico" method="POST">
+    <h1 class="text-2xl font-bold mb-6 text-center">Formulario de Evaluación</h1>
+    <form id="evaluationForm" onsubmit="calculateScore(event)">
       <!-- Q1: Edad -->
       <div class="mb-6">
         <p class="font-semibold">1. ¿Cuántos años tiene actualmente? (0-110)</p>
