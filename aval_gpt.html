@@ -271,7 +271,7 @@
           else tips.push("Intenta dormir entre 7 i 9 hores."); } 
         else if(edat>=10){
           if(hDormir>6){ score+=3;} 
-          else if tips.push("Intenta dormir entre 9 i 10 hores."); }
+          else if(hDormir<6){ tips.push("Intenta dormir entre 9 i 10 hores."); }}
       }
       const horariDormir=f.get("horariDormir");
       if(horariDormir==="Sí"){ score+=1; } 
