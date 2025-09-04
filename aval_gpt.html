@@ -48,22 +48,6 @@
         <section class="bg-white rounded-2xl shadow p-5 mb-6">
           <h2 class="text-lg font-semibold mb-4">Dades i hàbits</h2>
           <form id="formSalut" class="grid md:grid-cols-2 gap-4">
-            <!-- label class="flex flex-col gap-1">
-              <span class="text-sm font-medium">Quants anys té actualment?</span>
-              <input type="number" name="edat" min="0" max="110" class="input" />
-            </label>
-            <label class="flex flex-col gap-1">
-              <span class="text-sm font-medium">Quantes hores diàries dorm?</span>
-              <input type="number" name="horesDormir" min="0" max="24" step="0.5" class="input" />
-            </label>
-            <label class="flex flex-col gap-1">
-              <span class="text-sm font-medium">Quant pesa en kg?</span>
-              <input type="number" name="pes" min="0" max="300" step="0.1" class="input" />
-            </label>
-            <label class="flex flex-col gap-1">
-              <span class="text-sm font-medium">Quina alçada té en cm?</span>
-              <input type="number" name="alcada" min="0" max="260" class="input" />
-            </label>
       <!-- Q1: Edat -->
       <div class="mb-6">
         <p class="font-semibold text-base">1. Quants anys té actualment? (0-110)</p>
@@ -78,24 +62,24 @@
       <div class="mb-6">
         <p class="font-semibold text-base">3. Segueix un horari per dormir unes hores adequades? (SÍ/NO)</p>
         <div class="flex space-x-4 mt-2">
-          <label class="text-base"><input type="radio" name="horariDormir" value="SÍ" required> SÍ</label>
-          <label class="text-base"><input type="radio" name="horariDormir" value="NO"> NO</label>
+          <label class="text-base"><input type="radio" name="horariDormir" value="Sí" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="horariDormir" value="No"> NO</label>
         </div>
       </div>
       <!-- Q4: Dormir a les fosques -->
       <div class="mb-6">
         <p class="font-semibold text-base">4. Sol dormir a les fosques? (SÍ/NO)</p>
         <div class="flex space-x-4 mt-2">
-          <label class="text-base"><input type="radio" name="dormirFosques" value="SÍ" required> SÍ</label>
-          <label class="text-base"><input type="radio" name="dormirFosques" value="NO"> NO</label>
+          <label class="text-base"><input type="radio" name="dormirFosques" value="Sí" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="dormirFosques" value="No"> NO</label>
         </div>
       </div>
       <!-- Q5: Pantalla abans de dormir -->
       <div class="mb-6">
         <p class="font-semibold text-base">5. Sol tenir l'hàbit d'estar mirant una pantalla abans d'anar a dormir? (SÍ/NO)</p>
         <div class="flex space-x-4 mt-2">
-          <label class="text-base"><input type="radio" name="usPantalla" value="SÍ" required> SÍ</label>
-          <label class="text-base"><input type="radio" name="usPantalla" value="NO"> NO</label>
+          <label class="text-base"><input type="radio" name="usPantalla" value="Sí" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="usPantalla" value="No"> NO</label>
         </div>
       </div>
       <!-- Q6: Hores davant pantalla -->
@@ -107,8 +91,8 @@
       <div class="mb-6">
         <p class="font-semibold text-base">7. Fa exercici dues vegades mínim setmanalment? (SÍ/NO)</p>
         <div class="flex space-x-4 mt-2">
-          <label class="text-base"><input type="radio" name="dosExercici" value="SÍ" required> SÍ</label>
-          <label class="text-base"><input type="radio" name="dosExercici" value="NO"> NO</label>
+          <label class="text-base"><input type="radio" name="dosExercici" value="Sí" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="dosExercici" value="No"> NO</label>
         </div>
       </div>
       <!-- Q8: Hores d'exercici -->
@@ -120,24 +104,24 @@
       <div class="mb-6">
         <p class="font-semibold text-base">9. Reconeix fer alguna classe d’esforç físic (esforç de curta durada que li gasta molta energia i produeix molt de cansament) a la setmana? (SÍ/NO)</p>
         <div class="flex space-x-4 mt-2">
-          <label class="text-base"><input type="radio" name="classeEsforc" value="SÍ" required> SÍ</label>
-          <label class="text-base"><input type="radio" name="classeEsforc" value="NO"> NO</label>
+          <label class="text-base"><input type="radio" name="classeEsforc" value="Sí" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="classeEsforc" value="No"> NO</label>
         </div>
       </div>
       <!-- Q10: Esforç mental -->
       <div class="mb-6">
         <p class="font-semibold text-base">10. Entrena la ment, estudia o fa algun esforç mental diàriament? (SÍ/NO)</p>
         <div class="flex space-x-4 mt-2">
-          <label class="text-base"><input type="radio" name="entrenaMent" value="SÍ" required> SÍ</label>
-          <label class="text-base"><input type="radio" name="entrenaMent" value="NO"> NO</label>
+          <label class="text-base"><input type="radio" name="entrenaMent" value="Sí" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="entrenaMent" value="No"> NO</label>
         </div>
       </div>
       <!-- Q11: Menja verdura -->
       <div class="mb-6">
         <p class="font-semibold text-base">11. Menja molta verdura? (SÍ/NO)</p>
         <div class="flex space-x-4 mt-2">
-          <label class="text-base"><input type="radio" name="menjaVerdura" value="SÍ" required> SÍ</label>
-          <label class="text-base"><input type="radio" name="menjaVerdura" value="NO"> NO</label>
+          <label class="text-base"><input type="radio" name="menjaVerdura" value="Sí" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="menjaVerdura" value="No"> NO</label>
         </div>
       </div>
       <!-- Q12: Menja carn -->
@@ -149,8 +133,8 @@
       <div class="mb-6">
         <p class="font-semibold text-base">13. Sol consumir làctics i probiòtics? (SÍ/NO)</p>
         <div class="flex space-x-4 mt-2">
-          <label class="text-base"><input type="radio" name="consLact" value="SÍ" required> SÍ</label>
-          <label class="text-base"><input type="radio" name="consLact" value="NO"> NO</label>
+          <label class="text-base"><input type="radio" name="consLact" value="Sí" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="consLact" value="No"> NO</label>
         </div>
       </div>
       <!-- Q14: Àpats al dia -->
@@ -162,16 +146,16 @@
       <div class="mb-6">
         <p class="font-semibold text-base">15. Se sol quedar molt tip després d’un àpat? (SÍ/NO)</p>
         <div class="flex space-x-4 mt-2">
-          <label class="text-base"><input type="radio" name="moltTip" value="SÍ" required> SÍ</label>
-          <label class="text-base"><input type="radio" name="moltTip" value="NO"> NO</label>
+          <label class="text-base"><input type="radio" name="moltTip" value="Sí" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="moltTip" value="No"> NO</label>
         </div>
       </div>
       <!-- Q16: Aliments processats -->
       <div class="mb-6">
         <p class="font-semibold text-base">16. Menja molts aliments processats o menjar ràpid? (SÍ/NO)</p>
         <div class="flex space-x-4 mt-2">
-          <label class="text-base"><input type="radio" name="alimProc" value="SÍ" required> SÍ</label>
-          <label class="text-base"><input type="radio" name="alimProc" value="NO"> NO</label>
+          <label class="text-base"><input type="radio" name="alimProc" value="Sí" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="alimProc" value="No"> NO</label>
         </div>
       </div>
       <!-- Q17: Pes -->
@@ -188,32 +172,32 @@
       <div class="mb-6">
         <p class="font-semibold text-base">19. Té alguna classe de diabetis? (SÍ/NO)</p>
         <div class="flex space-x-4 mt-2">
-          <label class="text-base"><input type="radio" name="diabetis" value="SÍ" required> SÍ</label>
-          <label class="text-base"><input type="radio" name="diabetis" value="NO"> NO</label>
+          <label class="text-base"><input type="radio" name="diabetis" value="Sí" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="diabetis" value="No"> NO</label>
         </div>
       </div>
       <!-- Q20: Problemes respiratoris o cardíacs -->
       <div class="mb-6">
         <p class="font-semibold text-base">20. Té algun problema respiratori o cardíac? (SÍ/NO)</p>
         <div class="flex space-x-4 mt-2">
-          <label class="text-base"><input type="radio" name="respCard" value="SÍ" required> SÍ</label>
-          <label class="text-base"><input type="radio" name="respCard" value="NO"> NO</label>
+          <label class="text-base"><input type="radio" name="respCard" value="Sí" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="respCard" value="No"> NO</label>
         </div>
       </div>
       <!-- Q21: Càncer o malaltia -->
       <div class="mb-6">
         <p class="font-semibold text-base">21. Pateix algun càncer o malaltia? (SÍ/NO)</p>
         <div class="flex space-x-4 mt-2">
-          <label class="text-base"><input type="radio" name="cancer" value="SÍ" required> SÍ</label>
-          <label class="text-base"><input type="radio" name="cancer" value="NO"> NO</label>
+          <label class="text-base"><input type="radio" name="cancer" value="Sí" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="cancer" value="No"> NO</label>
         </div>
       </div>
       <!-- Q22: Antibiòtics -->
       <div class="mb-6">
         <p class="font-semibold text-base">22. Utilitza molt els antibiòtics? (SÍ/NO)</p>
         <div class="flex space-x-4 mt-2">
-          <label class="text-base"><input type="radio" name="antiBio" value="SÍ" required> SÍ</label>
-          <label class="text-base"><input type="radio" name="antiBio" value="NO"> NO</label>
+          <label class="text-base"><input type="radio" name="antiBio" value="Sí" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="antiBio" value="No"> NO</label>
         </div>
       </div>
       <!-- Q23: Visites al metge -->
@@ -225,24 +209,24 @@
       <div class="mb-6">
         <p class="font-semibold text-base">24. Manté una bona higiene i els seus espais habituals solen estar nets? (SÍ/NO)</p>
         <div class="flex space-x-4 mt-2">
-          <label class="text-base"><input type="radio" name="higiene" value="SÍ" required> SÍ</label>
-          <label class="text-base"><input type="radio" name="higiene" value="NO"> NO</label>
+          <label class="text-base"><input type="radio" name="higiene" value="Sí" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="higiene" value="No"> NO</label>
         </div>
       </div>
       <!-- Q25: Positivisme -->
       <div class="mb-6">
         <p class="font-semibold text-base">25. Sol ser positiu i veure el got mig ple? (SÍ/NO)</p>
         <div class="flex space-x-4 mt-2">
-          <label class="text-base"><input type="radio" name="positiu" value="SÍ" required> SÍ</label>
-          <label class="text-base"><input type="radio" name="positiu" value="NO"> NO</label>
+          <label class="text-base"><input type="radio" name="positiu" value="Sí" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="positiu" value="No"> NO</label>
         </div>
       </div>
       <!-- Q26: Angoixa o depressió -->
       <div class="mb-6">
         <p class="font-semibold text-base">26. Pateix angoixa o depressió? (SÍ/NO)</p>
         <div class="flex space-x-4 mt-2">
-          <label class="text-base"><input type="radio" name="angoixa" value="SÍ" required> SÍ</label>
-          <label class="text-base"><input type="radio" name="angoixa" value="NO"> NO</label>
+          <label class="text-base"><input type="radio" name="angoixa" value="Sí" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="angoixa" value="No"> NO</label>
         </div>
       </div>
           </form>
@@ -290,11 +274,11 @@
           else if tips.push("Intenta dormir entre 9 i 10 hores."); }
       }
       const horariDormir=f.get("horariDormir");
-      if(horariDormir==="Si"){ score+=1; } else if(horariDormir==="No"){ tips.push("Intenta tenir una regularitat a l'hora d'anar a dormir."); }
+      if(horariDormir==="Sí"){ score+=1; } else if(horariDormir==="No"){ tips.push("Intenta tenir una regularitat a l'hora d'anar a dormir."); }
       const dormirFosques=f.get("dormirFosques");
-      if(dormirFosques==="Si"){ score+=2; } else if(dormirFosques==="No"){ tips.push("Intenta dormir a les fosques per millorar la qualitat del son."); }
+      if(dormirFosques==="Sí"){ score+=2; } else if(dormirFosques==="No"){ tips.push("Intenta dormir a les fosques per millorar la qualitat del son."); }
       const usPantalla=f.get("usPantalla");
-      if(usPantalla==="Si"){ score-=1; } else if(usPantalla==="No"){ score +=3; }
+      if(usPantalla==="Sí"){ score-=1; } else if(usPantalla==="No"){ score +=3; }
       const horesPantalla=f.get("horesPantalla");
       if(horesPantalla){ 
         if(horesPantalla>0 && horesPantalla<2){ score+=3;}
@@ -302,7 +286,7 @@
         else if(horesPantalla>5){ tips.push("Es passa massa hores davant de la pantalla");}
       }
       const dosExercici=f.get("dosExercici");
-      if(dosExercici==="Si"){ score+=1; } else if(dosExercici==="No"){ tips.push("Intenti fer dues vegades la setmana exercici."); }
+      if(dosExercici==="Sí"){ score+=1; } else if(dosExercici==="No"){ tips.push("Intenti fer dues vegades la setmana exercici."); }
       const dosExercici=f.get("horesExercici");
       if(horesExercici){ 
         if(horesExercici>=2 && horesExercici<=4){ score+=3;}
@@ -310,42 +294,42 @@
         else if(horesPantalla<=1){ tips.push("És recomanable fer més hores d'exercici a la setmana");}
       }
       const classeEsforc=f.get("classeEsforc");
-      if(classeEsforc==="Si"){ score+=2; } else if(usPantalla==="No"){ score +=0; }
+      if(classeEsforc==="Sí"){ score+=2; } else if(usPantalla==="No"){ score +=0; }
       const entrenaMent=f.get("entrenaMent");
-      if(entrenaMent==="Si"){ score+=2; } else if(entrenaMent==="No"){ score +=0; }
+      if(entrenaMent==="Sí"){ score+=2; } else if(entrenaMent==="No"){ score +=0; }
       const menjaVerdura=f.get("menjaVerdura");
-      if(menjaVerdura==="Si"){ score+=2; } else if(menjaVerdura==="No"){ score +=0; }
+      if(menjaVerdura==="Sí"){ score+=2; } else if(menjaVerdura==="No"){ score +=0; }
       const vegadesCarn=f.get("vegadesCarn");
       if(vegadesCarn<=2){ score+=2; } 
       else if(vegadesCarn>2){ score +=0; tips.push("És recomanable només menjar carn dues vegades la setmana com a màxim");}
       const consLact=f.get("consLact");
-      if(consLact==="Si"){ score+=4; } else if(consLact==="No"){ score +=0; }
+      if(consLact==="Sí"){ score+=4; } else if(consLact==="No"){ score +=0; }
       const numApats=f.get("numApats");
       if(numApats>=3){ score+=2; } 
       else if(numApats<3){ score +=0; tips.push("És recomanable fer més apats en poca quantitat que menys amb molta quantitat");}
       const moltTip=f.get("moltTip");
-      if(moltTip==="Si"){ score+=0; } else if(moltTip==="No"){ score +=1; }
+      if(moltTip==="Sí"){ score+=0; } else if(moltTip==="No"){ score +=1; }
       const alimProc=f.get("alimProc");
-      if(alimProc==="Si"){ score-=1; } else if(alimProc==="No"){ score +=1; }
+      if(alimProc==="Sí"){ score-=1; } else if(alimProc==="No"){ score +=1; }
       const diabetis=f.get("diabetis");
-      if(diabetis==="Si"){ score-=3; } else if(diabetis==="No"){ score +=0; }
+      if(diabetis==="Sí"){ score-=3; } else if(diabetis==="No"){ score +=0; }
       const respCard=f.get("respCard");
-      if(respCard==="Si"){ score-=1; } else if(respCard==="No"){ score +=0; }
+      if(respCard==="Sí"){ score-=1; } else if(respCard==="No"){ score +=0; }
       const cancer=f.get("cancer");
-      if(cancer==="Si"){ score-=3; } else if(cancer==="No"){ score +=0; }
+      if(cancer==="Sí"){ score-=3; } else if(cancer==="No"){ score +=0; }
       const antiBio=f.get("antiBio");
-      if(antiBio==="Si"){ score-=1; } else if(antiBio==="No"){ score +=1; }
+      if(antiBio==="Sí"){ score-=1; } else if(antiBio==="No"){ score +=1; }
       const numRev=f.get("numRev");
       if(numRev){ 
         if(numRev>=2 ){ score+=2;}
         else if(numRev<2){ score+=0;}
       }
       const higiene=f.get("higiene");
-      if(higiene==="Si"){ score+=1; } else if(higiene==="No"){ score +=0; }
+      if(higiene==="Sí"){ score+=1; } else if(higiene==="No"){ score +=0; }
       const positiu=f.get("positiu");
-      if(positiu==="Si"){ score+=2; } else if(positiu==="No"){ score +=0; }
+      if(positiu==="Sí"){ score+=2; } else if(positiu==="No"){ score +=0; }
       const angoixa=f.get("angoixa");
-      if(angoixa==="Si"){ score-=0; } else if(angoixa==="No"){ score +=1; }
+      if(angoixa==="Sí"){ score-=0; } else if(angoixa==="No"){ score +=1; }
 
       const pes=Number(f.get("pes"));
       const alcada=Number(f.get("alcada"));
