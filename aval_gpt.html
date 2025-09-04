@@ -340,7 +340,7 @@
         else if(b<33){ score-=0; tips.push("Perdre una mica de pes podria ajudar."); }
         else if(b>=33){ score-=0; tips.push("Risc elevat de problemes cardiopulmonars."); }
       }
-      score=clamp(Math.round(score),0,100);
+      
       let nivell="Risc alt";
       if(score>=85) nivell="Salut excel·lent"; else if(score>=70) nivell="Bona salut"; else if(score>=55) nivell="Salut acceptable"; else if(score>=40) nivell="Millorable";
       return {score,bmi:b,bmiCat:categoriaBMI(b),nivell,tips:[...new Set(tips)]};
