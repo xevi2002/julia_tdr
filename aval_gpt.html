@@ -342,7 +342,7 @@
       }
       
       let nivell="Risc alt";
-      if(score>=85) nivell="Salut excel·lent"; else if(score>=70) nivell="Bona salut"; else if(score>=55) nivell="Salut acceptable"; else if(score>=40) nivell="Millorable";
+      if(score>=85) nivell="Salut excel·lent"; else if(score>=70) nivell="Bona salut"; else if(score>=55) nivell="Salut acceptable"; else if(score>=40) nivell="Millorable"; else if (score<40) nivell="Pèssim";
       return {score,bmi:b,bmiCat:categoriaBMI(b),nivell,tips:[...new Set(tips)]};
     }
 
