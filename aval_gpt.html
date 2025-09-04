@@ -64,7 +64,187 @@
               <span class="text-sm font-medium">Quina alçada té en cm?</span>
               <input type="number" name="alcada" min="0" max="260" class="input" />
             </label>
-            <!-- Pots afegir aquí la resta de preguntes segons calgui -->
+      <!-- Q1: Edat -->
+      <div class="mb-6">
+        <p class="font-semibold text-base">1. Quants anys té actualment? (0-110)</p>
+        <input type="number" name="q1" min="0" max="110" required class="w-full p-2 border rounded mt-2 text-base" placeholder="Introdueix la teva edat">
+      </div>
+      <!-- Q2: Hores de son -->
+      <div class="mb-6">
+        <p class="font-semibold text-base">2. Quantes hores diàries dorm? (0-24)</p>
+        <input type="number" name="q2" min="0" max="24" required class="w-full p-2 border rounded mt-2 text-base" placeholder="Hores de son">
+      </div>
+      <!-- Q3: Horari de son -->
+      <div class="mb-6">
+        <p class="font-semibold text-base">3. Segueix un horari per dormir unes hores adequades? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label class="text-base"><input type="radio" name="q3" value="SÍ" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="q3" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q4: Dormir a les fosques -->
+      <div class="mb-6">
+        <p class="font-semibold text-base">4. Sol dormir a les fosques? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label class="text-base"><input type="radio" name="q4" value="SÍ" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="q4" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q5: Pantalla abans de dormir -->
+      <div class="mb-6">
+        <p class="font-semibold text-base">5. Sol tenir l'hàbit d'estar mirant una pantalla abans d'anar a dormir? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label class="text-base"><input type="radio" name="q5" value="SÍ" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="q5" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q6: Hores davant pantalla -->
+      <div class="mb-6">
+        <p class="font-semibold text-base">6. Quina és la seva mitjana d'hores diàries davant d’una pantalla? (0-24)</p>
+        <input type="number" name="q6" min="0" max="24" required class="w-full p-2 border rounded mt-2 text-base" placeholder="Hores davant pantalla">
+      </div>
+      <!-- Q7: Exercici setmanal -->
+      <div class="mb-6">
+        <p class="font-semibold text-base">7. Fa exercici dues vegades mínim setmanalment? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label class="text-base"><input type="radio" name="q7" value="SÍ" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="q7" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q8: Hores d'exercici -->
+      <div class="mb-6">
+        <p class="font-semibold text-base">8. Quantes hores a la setmana fa exercici físic? (0-24)</p>
+        <input type="number" name="q8" min="0" max="24" required class="w-full p-2 border rounded mt-2 text-base" placeholder="Hores d'exercici">
+      </div>
+      <!-- Q9: Esforç físic -->
+      <div class="mb-6">
+        <p class="font-semibold text-base">9. Reconeix fer alguna classe d’esforç físic (esforç de curta durada que li gasta molta energia i produeix molt de cansament) a la setmana? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label class="text-base"><input type="radio" name="q9" value="SÍ" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="q9" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q10: Esforç mental -->
+      <div class="mb-6">
+        <p class="font-semibold text-base">10. Entrena la ment, estudia o fa algun esforç mental diàriament? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label class="text-base"><input type="radio" name="q10" value="SÍ" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="q10" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q11: Menja verdura -->
+      <div class="mb-6">
+        <p class="font-semibold text-base">11. Menja molta verdura? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label class="text-base"><input type="radio" name="q11" value="SÍ" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="q11" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q12: Menja carn -->
+      <div class="mb-6">
+        <p class="font-semibold text-base">12. Quantes vegades a la setmana menja carn? (1-10)</p>
+        <input type="number" name="q12" min="1" max="10" required class="w-full p-2 border rounded mt-2 text-base" placeholder="Vegades que menja carn">
+      </div>
+      <!-- Q13: Làctics i probiòtics -->
+      <div class="mb-6">
+        <p class="font-semibold text-base">13. Sol consumir làctics i probiòtics? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label class="text-base"><input type="radio" name="q13" value="SÍ" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="q13" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q14: Àpats al dia -->
+      <div class="mb-6">
+        <p class="font-semibold text-base">14. Quants àpats al dia sol menjar? (1-5)</p>
+        <input type="number" name="q14" min="1" max="5" required class="w-full p-2 border rounded mt-2 text-base" placeholder="Nombre d'àpats">
+      </div>
+      <!-- Q15: Quedar-se tip -->
+      <div class="mb-6">
+        <p class="font-semibold text-base">15. Se sol quedar molt tip després d’un àpat? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label class="text-base"><input type="radio" name="q15" value="SÍ" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="q15" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q16: Aliments processats -->
+      <div class="mb-6">
+        <p class="font-semibold text-base">16. Menja molts aliments processats o menjar ràpid? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label class="text-base"><input type="radio" name="q16" value="SÍ" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="q16" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q17: Pes -->
+      <div class="mb-6">
+        <p class="font-semibold text-base">17. Quant pesa en kg? (0-150)</p>
+        <input type="number" name="q17" min="0" max="150" required class="w-full p-2 border rounded mt-2 text-base" placeholder="Pes en kg">
+      </div>
+      <!-- Q18: Alçada -->
+      <div class="mb-6">
+        <p class="font-semibold text-base">18. Quina alçada té en cm? (0-240)</p>
+        <input type="number" name="q18" min="0" max="240" required class="w-full p-2 border rounded mt-2 text-base" placeholder="Alçada en cm">
+      </div>
+      <!-- Q19: Diabetis -->
+      <div class="mb-6">
+        <p class="font-semibold text-base">19. Té alguna classe de diabetis? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label class="text-base"><input type="radio" name="q19" value="SÍ" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="q19" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q20: Problemes respiratoris o cardíacs -->
+      <div class="mb-6">
+        <p class="font-semibold text-base">20. Té algun problema respiratori o cardíac? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label class="text-base"><input type="radio" name="q20" value="SÍ" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="q20" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q21: Càncer o malaltia -->
+      <div class="mb-6">
+        <p class="font-semibold text-base">21. Pateix algun càncer o malaltia? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label class="text-base"><input type="radio" name="q21" value="SÍ" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="q21" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q22: Antibiòtics -->
+      <div class="mb-6">
+        <p class="font-semibold text-base">22. Utilitza molt els antibiòtics? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label class="text-base"><input type="radio" name="q22" value="SÍ" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="q22" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q23: Visites al metge -->
+      <div class="mb-6">
+        <p class="font-semibold text-base">23. Cada quant sol anar al metge o fer alguna revisió? (0-12)</p>
+        <input type="number" name="q23" min="0" max="12" required class="w-full p-2 border rounded mt-2 text-base" placeholder="Visites a l'any">
+      </div>
+      <!-- Q24: Higiene -->
+      <div class="mb-6">
+        <p class="font-semibold text-base">24. Manté una bona higiene i els seus espais habituals solen estar nets? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label class="text-base"><input type="radio" name="q24" value="SÍ" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="q24" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q25: Positivisme -->
+      <div class="mb-6">
+        <p class="font-semibold text-base">25. Sol ser positiu i veure el got mig ple? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label class="text-base"><input type="radio" name="q25" value="SÍ" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="q25" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q26: Angoixa o depressió -->
+      <div class="mb-6">
+        <p class="font-semibold text-base">26. Pateix angoixa o depressió? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label class="text-base"><input type="radio" name="q26" value="SÍ" required> SÍ</label>
+          <label class="text-base"><input type="radio" name="q26" value="NO"> NO</label>
+        </div>
+      </div>
           </form>
           <button type="button" onclick="avaluar()" class="mt-4 px-4 py-2 rounded-xl bg-green-600 hover:bg-green-700 text-white">Calcula resultat</button>
         </section>
