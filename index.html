@@ -49,61 +49,187 @@
   <div class="bg-white p-8 rounded-lg shadow-lg max-w-2xl w-full">
     <h1 class="text-2xl font-bold mb-6 text-center">Formulario de Evaluación</h1>
     <form id="evaluationForm" onsubmit="calculateScore(event)">
-      <!-- Pregunta 1 -->
-        <div class="mb-6">
-        <p class="font-semibold">1. ¿Quina edat tens? (0-110)</p>
-        <input type="number" name="q1" min="0" max="110" required class="w-full p-2 border rounded mt-2" placeholder="Ingresa un valor de 0 a 110">
+     <!-- Q1: Edad -->
+      <div class="mb-6">
+        <p class="font-semibold">1. ¿Cuántos años tiene actualmente? (0-110)</p>
+        <input type="number" name="q1" min="0" max="110" required class="w-full p-2 border rounded mt-2" placeholder="Ingresa tu edad">
       </div>
-      <!-- Pregunta 2 -->
-        <div class="mb-6">
-        <p class="font-semibold">2. Quantes hores diàries dorms?</p>
-        <input type="number" name="q2" min="0" max="24" required class="w-full p-2 border rounded mt-2" placeholder="Ingresa un valor de 0 a 24">
+      <!-- Q2: Horas de sueño -->
+      <div class="mb-6">
+        <p class="font-semibold">2. ¿Cuántas horas diarias duerme? (0-24)</p>
+        <input type="number" name="q2" min="0" max="24" required class="w-full p-2 border rounded mt-2" placeholder="Horas de sueño">
       </div>
-      <!-- Pregunta 3 -->
-        <div class="mb-6">
-           <p class="font-semibold">3.	Sol dormir a les fosques?</p>
-           <div class="flex space-x-4 mt-2">
-           <label><input type="radio" name="q3" value="SI" required> SI</label>
-           <label><input type="radio" name="q3" value="NO"> NO</label>
+      <!-- Q3: Horari de son -->
+      <div class="mb-6">
+        <p class="font-semibold">3. ¿Sigue un horario para dormir unas horas adecuadas? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q3" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q3" value="NO"> NO</label>
         </div>
       </div>
-       <!-- Pregunta 4 -->
-        <div class="mb-6">
-           <p class="font-semibold">4.	Sol tenir l'hàbit d'estar mirant una pantalla abans d'anar a dormir?</p>
-           <div class="flex space-x-4 mt-2">
-           <label><input type="radio" name="q4" value="SI" required> SI</label>
-           <label><input type="radio" name="q4" value="NO"> NO</label>
+      <!-- Q4: Dormir a les fosques -->
+      <div class="mb-6">
+        <p class="font-semibold">4. ¿Suele dormir a oscuras? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q4" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q4" value="NO"> NO</label>
         </div>
-      </div>            
-      <!-- Pregunta 5 -->
-        <div class="mb-6">
-        <p class="font-semibold">5.	Quina és la seva mitjana d'hores diàries estant davant d'alguna pantalla? (0-12h)</p>
-        <input type="number" name="q5" min="0" max="12" required class="w-full p-2 border rounded mt-2" placeholder="Ingressa un valor de 0 a 12h">
-      </div>    
-       <!-- Pregunta 6 -->
-        <div class="mb-6">
-           <p class="font-semibold">6.	Fa exercici regularment?</p>
-           <div class="flex space-x-4 mt-2">
-           <label><input type="radio" name="q6" value="SI" required> SI</label>
-           <label><input type="radio" name="q6" value="NO"> NO</label>
+      </div>
+      <!-- Q5: Pantalla abans de dormir -->
+      <div class="mb-6">
+        <p class="font-semibold">5. ¿Suele tener el hábito de mirar una pantalla antes de dormir? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q5" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q5" value="NO"> NO</label>
         </div>
-      </div> 
-       <!-- Pregunta 7 -->
-        <div class="mb-6">
-           <p class="font-semibold">7.	Creu que té una alimentació sana?</p>
-           <div class="flex space-x-4 mt-2">
-           <label><input type="radio" name="q7" value="SI" required> SI</label>
-           <label><input type="radio" name="q7" value="NO"> NO</label>
+      </div>
+      <!-- Q6: Hores davant pantalla -->
+      <div class="mb-6">
+        <p class="font-semibold">6. ¿Cuál es su promedio de horas diarias frente a una pantalla? (0-24)</p>
+        <input type="number" name="q6" min="0" max="24" required class="w-full p-2 border rounded mt-2" placeholder="Horas frente a pantalla">
+      </div>
+      <!-- Q7: Exercici setmanal -->
+      <div class="mb-6">
+        <p class="font-semibold">7. ¿Hace ejercicio al menos dos veces por semana? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q7" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q7" value="NO"> NO</label>
         </div>
-      </div> 
-       <!-- Pregunta 8 -->
-        <div class="mb-6">
-           <p class="font-semibold">8.	Ha tingut alguna malaltia greu últimament?</p>
-           <div class="flex space-x-4 mt-2">
-           <label><input type="radio" name="q8" value="SI" required> SI</label>
-           <label><input type="radio" name="q8" value="NO"> NO</label>
+      </div>
+      <!-- Q8: Hores d'exercici -->
+      <div class="mb-6">
+        <p class="font-semibold">8. ¿Cuántas horas a la semana hace ejercicio físico? (0-24)</p>
+        <input type="number" name="q8" min="0" max="24" required class="w-full p-2 border rounded mt-2" placeholder="Horas de ejercicio">
+      </div>
+      <!-- Q9: Esforç físic -->
+      <div class="mb-6">
+        <p class="font-semibold">9. ¿Reconoce hacer algún esfuerzo físico intenso semanalmente? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q9" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q9" value="NO"> NO</label>
         </div>
-      </div> 
+      </div>
+      <!-- Q10: Esforç mental -->
+      <div class="mb-6">
+        <p class="font-semibold">10. ¿Entrena la mente, estudia o hace algún esfuerzo mental diariamente? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q10" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q10" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q11: Menja verdura -->
+      <div class="mb-6">
+        <p class="font-semibold">11. ¿Come mucha verdura? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q11" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q11" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q12: Menja carn -->
+      <div class="mb-6">
+        <p class="font-semibold">12. ¿Cuántas veces a la semana come carne? (1-10)</p>
+        <input type="number" name="q12" min="1" max="10" required class="w-full p-2 border rounded mt-2" placeholder="Veces que come carne">
+      </div>
+      <!-- Q13: Làctics i probiòtics -->
+      <div class="mb-6">
+        <p class="font-semibold">13. ¿Suele consumir lácteos y probióticos? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q13" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q13" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q14: Àpats al dia -->
+      <div class="mb-6">
+        <p class="font-semibold">14. ¿Cuántos comidas al día suele hacer? (1-5)</p>
+        <input type="number" name="q14" min="1" max="5" required class="w-full p-2 border rounded mt-2" placeholder="Número de comidas">
+      </div>
+      <!-- Q15: Quedar-se tip -->
+      <div class="mb-6">
+        <p class="font-semibold">15. ¿Suele quedarse muy lleno después de una comida? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q15" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q15" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q16: Aliments processats -->
+      <div class="mb-6">
+        <p class="font-semibold">16. ¿Come muchos alimentos procesados o comida rápida? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q16" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q16" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q17: Pes -->
+      <div class="mb-6">
+        <p class="font-semibold">17. ¿Cuánto pesa en kg? (0-150)</p>
+        <input type="number" name="q17" min="0" max="150" required class="w-full p-2 border rounded mt-2" placeholder="Peso en kg">
+      </div>
+      <!-- Q18: Alçada -->
+      <div class="mb-6">
+        <p class="font-semibold">18. ¿Qué altura tiene en cm? (0-240)</p>
+        <input type="number" name="q18" min="0" max="240" required class="w-full p-2 border rounded mt-2" placeholder="Altura en cm">
+      </div>
+      <!-- Q19: Diabetis -->
+      <div class="mb-6">
+        <p class="font-semibold">19. ¿Tiene algún tipo de diabetes? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q19" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q19" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q20: Problemes respiratoris o cardíacs -->
+      <div class="mb-6">
+        <p class="font-semibold">20. ¿Tiene algún problema respiratorio o cardíaco? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q20" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q20" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q21: Càncer o malaltia -->
+      <div class="mb-6">
+        <p class="font-semibold">21. ¿Padece algún cáncer o enfermedad? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q21" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q21" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q22: Antibiòtics -->
+      <div class="mb-6">
+        <p class="font-semibold">22. ¿Utiliza mucho los antibióticos? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q22" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q22" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q23: Visites al metge -->
+      <div class="mb-6">
+        <p class="font-semibold">23. ¿Cada cuánto suele ir al médico o hacer alguna revisión? (0-12)</p>
+        <input type="number" name="q23" min="0" max="12" required class="w-full p-2 border rounded mt-2" placeholder="Visitas al año">
+      </div>
+      <!-- Q24: Higiene -->
+      <div class="mb-6">
+        <p class="font-semibold">24. ¿Mantiene una buena higiene y sus espacios habituales suelen estar limpios? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q24" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q24" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q25: Positivisme -->
+      <div class="mb-6">
+        <p class="font-semibold">25. ¿Suele ser positivo y ver el vaso medio lleno? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q25" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q25" value="NO"> NO</label>
+        </div>
+      </div>
+      <!-- Q26: Angoixa o depressió -->
+      <div class="mb-6">
+        <p class="font-semibold">26. ¿Padece ansiedad o depresión? (SÍ/NO)</p>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="q26" value="SÍ" required> SÍ</label>
+          <label><input type="radio" name="q26" value="NO"> NO</label>
+        </div>
+      </div>
       <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">Enviar Evaluación</button>
     </form>
     <div id="result" class="mt-6 text-center hidden">
