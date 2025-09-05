@@ -330,7 +330,7 @@
 
       //<!-- Q12: Menja carn -->
       const vegadesCarn=Number(f.get("vegadesCarn"));
-      if(vegadesCarn<=2){ score+=2;  tips.push("Q12");} 
+      if(vegadesCarn>=0&&vegadesCarn<=2){ score+=2;  tips.push("Q12");} 
       else if(vegadesCarn>2){ score +=0; tips.push("És recomanable només menjar carn dues vegades la setmana com a màxim");}
       
       //<!-- Q13: Làctics i probiòtics -->
