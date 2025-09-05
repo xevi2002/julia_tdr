@@ -264,7 +264,7 @@
       if(edat){
         if(edat<=19) score+=4; 
         else if(edat>=20&&edat<=34){ score+=3;} 
-        else if(edat>=35&&edat<=50){ score+=2;}
+        else if(edat>=35&&edat<=50){ score+=2; tips.push("Q1");}
         else if(edat>=51&&edat<=75){ score+=1;}}
       
       //<!-- Q2: Hores de son -->
@@ -285,7 +285,7 @@
       
       //<!-- Q4: Dormir a les fosques -->
       const dormirFosques=f.get("dormirFosques");
-      if(dormirFosques==="Sí"){ score+=2; } 
+      if(dormirFosques==="Sí"){ score+=2;  tips.push("Q4");} 
       else if(dormirFosques==="No"){ tips.push("Intenta dormir a les fosques per millorar la qualitat del son."); }
       
       //<!-- Q5: Pantalla abans de dormir -->
@@ -309,28 +309,28 @@
       const horesExercici=Number(f.get("horesExercici"));
       if(horesExercici){ 
         if(horesExercici>=2 && horesExercici<=4){ score+=3;}
-        else if(horesExercici>4){ score+=2;}
+        else if(horesExercici>4){ score+=2; tips.push("Q8");}
         else if(horesExercici<=1){ tips.push("És recomanable fer més hores d'exercici a la setmana");}
       }
 
       //<!-- Q9: Esforç físic -->
       const classeEsforc=f.get("classeEsforc");
-      if(classeEsforc==="Sí"){ score+=2; } 
+      if(classeEsforc==="Sí"){ score+=2;  tips.push("Q9");} 
       else if(classeEsforc==="No"){ score +=0; }
 
       //<!-- Q10: Esforç mental -->
       const entrenaMent=f.get("entrenaMent");
-      if(entrenaMent==="Sí"){ score+=2; } 
+      if(entrenaMent==="Sí"){ score+=2;  tips.push("Q10");} 
       else if(entrenaMent==="No"){ score +=0; }
       
       //<!-- Q11: Menja verdura -->
       const menjaVerdura=f.get("menjaVerdura");
-      if(menjaVerdura==="Sí"){ score+=2; } 
+      if(menjaVerdura==="Sí"){ score+=2;  tips.push("Q11");} 
       else if(menjaVerdura==="No"){ score +=0; }
 
       //<!-- Q12: Menja carn -->
       const vegadesCarn=Number(f.get("vegadesCarn"));
-      if(vegadesCarn<=2){ score+=2; } 
+      if(vegadesCarn<=2){ score+=2;  tips.push("Q12");} 
       else if(vegadesCarn>2){ score +=0; tips.push("És recomanable només menjar carn dues vegades la setmana com a màxim");}
       
       //<!-- Q13: Làctics i probiòtics -->
@@ -340,7 +340,7 @@
       
       //<!-- Q14: Àpats al dia -->
       const numApats=Number(f.get("numApats"));
-      if(numApats>=3){ score+=2; } 
+      if(numApats>=3){ score+=2;  tips.push("Q14");} 
       else if(numApats>0 && numApats<3){ score +=0; tips.push("És recomanable fer més apats en poca quantitat que menys amb molta quantitat");}
       
       //<!-- Q15: Quedar-se tip -->
@@ -376,7 +376,7 @@
       //<!-- Q23: Visites al metge -->
       const numRev=Number(f.get("numRev"));
       if(numRev){ 
-        if(numRev>=2 ){ score+=2;}
+        if(numRev>=2 ){ score+=2; tips.push("Q23");}
         else if(numRev<2){ score+=0;}
       }
       
@@ -387,7 +387,7 @@
       
       //<!-- Q25: Positivisme -->
       const positiu=f.get("positiu");
-      if(positiu==="Sí"){ score+=2; } 
+      if(positiu==="Sí"){ score+=2;  tips.push("Q25");} 
       else if(positiu==="No"){ score +=0; }
       
       //<!-- Q26: Angoixa o depressió -->
