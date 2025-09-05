@@ -262,7 +262,7 @@
       //<!-- Q1: Edad -->
       const edat=Number(f.get("edat"));
       if(edat){
-        if(edat>=19) score+=4; 
+        if(edat<=19) score+=4; 
         else if(edat>=20&&edat<=34){ score+=3;} 
         else if(edat>=35&&edat<=50){ score+=2;}
         else if(edat>=51&&edat<=75){ score+=1;}}
