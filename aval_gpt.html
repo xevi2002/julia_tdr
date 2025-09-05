@@ -126,8 +126,8 @@
       </div>
       <!-- Q12: Menja carn -->
       <div class="mb-6">
-        <p class="font-semibold text-base">12. Quantes vegades a la setmana menja carn? (1-10)</p>
-        <input type="number" name="vegadesCarn" min="1" max="10" required class="w-full p-2 border rounded mt-2 text-base" placeholder="Vegades que menja carn">
+        <p class="font-semibold text-base">12. Quantes vegades a la setmana menja carn? (0-10)</p>
+        <input type="number" name="vegadesCarn" min="0" max="10" required class="w-full p-2 border rounded mt-2 text-base" placeholder="Vegades que menja carn">
       </div>
       <!-- Q13: Làctics i probiòtics -->
       <div class="mb-6">
@@ -330,8 +330,10 @@
 
       //<!-- Q12: Menja carn -->
       const vegadesCarn=Number(f.get("vegadesCarn"));
-      if(vegadesCarn>=0&&vegadesCarn<=2){ score+=2;  tips.push("Q12");} 
-      else if(vegadesCarn>2){ score +=0; tips.push("És recomanable només menjar carn dues vegades la setmana com a màxim");}
+      if(vegadesCarn){
+        if(vegadesCarn>=0&&vegadesCarn<=2){ score+=2;  tips.push("Q12");} 
+        else if(vegadesCarn>2){ score +=0; tips.push("És recomanable només menjar carn dues vegades la setmana com a màxim");}
+      }
       
       //<!-- Q13: Làctics i probiòtics -->
       const consLact=f.get("consLact");
@@ -414,7 +416,7 @@
 
     function avaluar(){
       const r=calcula();
-      document.getElementById("score").textContent=r.score-2;
+      document.getElementById("score").textContent=r.score;
       document.getElementById("nivell").textContent=r.nivell;
       document.getElementById("bmi").textContent=r.bmi? r.bmi+" ("+r.bmiCat+")":"—";
       const box=document.getElementById("tipsBox");
