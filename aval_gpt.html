@@ -236,11 +236,11 @@
         <section id="recomanacions" class="bg-white rounded-2xl shadow p-5">
           <h2 class="text-lg font-semibold mb-3">Com interpretar el resultat</h2>
           <ul class="list-disc ml-5 space-y-1 text-sm text-gray-700">
-            <li><strong>≥ 85</strong>: Salut excel·lent</li>
-            <li><strong>70–84</strong>: Bona salut</li>
-            <li><strong>55–69</strong>: Salut acceptable</li>
-            <li><strong>40–54</strong>: Millorable</li>
-            <li><strong>&lt; 40</strong>: Risc alt</li>
+            <li><strong>≥ 35</strong>: Salut excel·lent</li>
+            <li><strong>25–35</strong>: Bona salut</li>
+            <li><strong>15–25</strong>: Salut acceptable</li>
+            <li><strong>10–15</strong>: Millorable</li>
+            <li><strong>&lt; 10</strong>: Risc alt</li>
           </ul>
           <p class="mt-3 text-sm text-gray-600">La metodologia està dissenyada per la Júlia Xirgu.</p>
         </section>
@@ -309,14 +309,14 @@
       const horesExercici=Number(f.get("horesExercici"));
       if(horesExercici){ 
         if(horesExercici>=2 && horesExercici<=4){ score+=3;}
-        else if(horesPantalla>4){ score+=2;}
-        else if(horesPantalla<=1){ tips.push("És recomanable fer més hores d'exercici a la setmana");}
+        else if(horesExercici>4){ score+=2;}
+        else if(horesExercici<=1){ tips.push("És recomanable fer més hores d'exercici a la setmana");}
       }
 
       //<!-- Q9: Esforç físic -->
       const classeEsforc=f.get("classeEsforc");
       if(classeEsforc==="Sí"){ score+=2; } 
-      else if(usPantalla==="No"){ score +=0; }
+      else if(classeEsforc==="No"){ score +=0; }
 
       //<!-- Q10: Esforç mental -->
       const entrenaMent=f.get("entrenaMent");
@@ -408,7 +408,7 @@
       }
       
       let nivell="Risc alt";
-      if(score>=85) nivell="Salut excel·lent"; else if(score>=70) nivell="Bona salut"; else if(score>=55) nivell="Salut acceptable"; else if(score>=40) nivell="Millorable"; else if (score<40) nivell="Pèssim";
+      if(score>=30) nivell="Salut excel·lent"; else if(score>=20) nivell="Bona salut"; else if(score>=15) nivell="Salut acceptable"; else if(score>=10) nivell="Millorable"; else if (score<10) nivell="Pèssim";
       return {score,bmi:b,bmiCat:categoriaBMI(b),nivell,tips:[...new Set(tips)]};
     }
 
