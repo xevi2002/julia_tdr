@@ -55,8 +55,8 @@
       </div>
       <!-- Q2: Hores de son -->
       <div class="mb-6">
-        <p class="font-semibold text-base">2. Quantes hores diàries dorm? (0-24)</p>
-        <input type="number" name="horesDormir" min="0" max="24" required class="w-full p-2 border rounded mt-2 text-base" placeholder="Hores de son">
+        <p class="font-semibold text-base">2. Quantes hores diàries dorm? (0-12)</p>
+        <input type="number" name="horesDormir" min="0" max="12" required class="w-full p-2 border rounded mt-2 text-base" placeholder="Hores de son">
       </div>
       <!-- Q3: Horari de son -->
       <div class="mb-6">
@@ -272,10 +272,10 @@
       if(hDormir){ 
         if(edat>12){
           if(hDormir>=8){ score+=3;}
-          else tips.push("Intenta dormir entre 7 i 9 hores."); } 
-        else if(edat>=10){
-          if(hDormir>6){ score+=3;} 
-          else if(hDormir<6){ tips.push("Intenta dormir entre 9 i 10 hores."); }}
+          else if(hDormir<8){ tips.push("Intenta dormir entre 7 i 9 hores."); } }
+        else if(edat<=12){
+          if(hDormir>10){ score+=3;} 
+          else if(hDormir<10){ tips.push("Intenta dormir entre 9 i 10 hores."); }}
       }
       
       //<!-- Q3: Horari de son -->
