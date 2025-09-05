@@ -84,8 +84,8 @@
       </div>
       <!-- Q6: Hores davant pantalla -->
       <div class="mb-6">
-        <p class="font-semibold text-base">6. Quina és la seva mitjana d'hores diàries davant d’una pantalla? (0-24)</p>
-        <input type="number" name="horesPantalla" min="0" max="24" required class="w-full p-2 border rounded mt-2 text-base" placeholder="Hores davant pantalla">
+        <p class="font-semibold text-base">6. Quina és la seva mitjana d'hores diàries davant d’una pantalla? (0-12)</p>
+        <input type="number" name="horesPantalla" min="0" max="12" required class="w-full p-2 border rounded mt-2 text-base" placeholder="Hores davant pantalla">
       </div>
       <!-- Q7: Exercici setmanal -->
       <div class="mb-6">
@@ -97,8 +97,8 @@
       </div>
       <!-- Q8: Hores d'exercici -->
       <div class="mb-6">
-        <p class="font-semibold text-base">8. Quantes hores a la setmana fa exercici físic? (0-24)</p>
-        <input type="number" name="horesExercici" min="0" max="24" required class="w-full p-2 border rounded mt-2 text-base" placeholder="Hores d'exercici">
+        <p class="font-semibold text-base">8. Quantes hores a la setmana fa exercici físic? (0-15)</p>
+        <input type="number" name="horesExercici" min="0" max="15" required class="w-full p-2 border rounded mt-2 text-base" placeholder="Hores d'exercici">
       </div>
       <!-- Q9: Esforç físic -->
       <div class="mb-6">
@@ -118,7 +118,7 @@
       </div>
       <!-- Q11: Menja verdura -->
       <div class="mb-6">
-        <p class="font-semibold text-base">11. Menja molta verdura? (SÍ/NO)</p>
+        <p class="font-semibold text-base">11. Menja fruita i verdura cada dia? (SÍ/NO)</p>
         <div class="flex space-x-4 mt-2">
           <label class="text-base"><input type="radio" name="menjaVerdura" value="Sí" required> SÍ</label>
           <label class="text-base"><input type="radio" name="menjaVerdura" value="No"> NO</label>
@@ -202,8 +202,8 @@
       </div>
       <!-- Q23: Visites al metge -->
       <div class="mb-6">
-        <p class="font-semibold text-base">23. Cada quant sol anar al metge o fer alguna revisió? (0-12)</p>
-        <input type="number" name="numRev" min="0" max="12" required class="w-full p-2 border rounded mt-2 text-base" placeholder="Visites a l'any">
+        <p class="font-semibold text-base">23. Quantes vegades a l'any va al metge o a fer-se una revisió? (0-4)</p>
+        <input type="number" name="numRev" min="0" max="4" required class="w-full p-2 border rounded mt-2 text-base" placeholder="Visites a l'any">
       </div>
       <!-- Q24: Higiene -->
       <div class="mb-6">
@@ -296,8 +296,8 @@
       //<!-- Q6: Hores davant pantalla -->
       const horesPantalla=Number(f.get("horesPantalla"));
       if(horesPantalla){ 
-        if(horesPantalla>0 && horesPantalla<2){ score+=3;}
-        else if(horesPantalla>2 && horesPantalla<5){ score+=1;}
+        if(horesPantalla>0 && horesPantalla<=2){ score+=3;}
+        else if(horesPantalla>2 && horesPantalla<=5){ score+=1;}
         else if(horesPantalla>5){ tips.push("Es passa massa hores davant de la pantalla");}
       }
       
@@ -308,8 +308,8 @@
       //<!-- Q8: Hores d'exercici -->      
       const horesExercici=Number(f.get("horesExercici"));
       if(horesExercici){ 
-        if(horesExercici>=2 && horesExercici<=4){ score+=3;}
-        else if(horesExercici>4){ score+=2;}
+        if(horesExercici>=2 && horesExercici<=6){ score+=3;}
+        else if(horesExercici>6){ score+=2;}
         else if(horesExercici<=1){ tips.push("És recomanable fer més hores d'exercici a la setmana");}
       }
 
