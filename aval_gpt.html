@@ -264,7 +264,7 @@
       if(edat){
         if(edat<=19) score+=4; 
         else if(edat>=20&&edat<=34){ score+=3;} 
-        else if(edat>=35&&edat<=50){ score+=2; tips.push("Q1");}
+        else if(edat>=35&&edat<=50){ score+=2; tips.push("error en Q1");}
         else if(edat>=51&&edat<=75){ score+=1;}}
       
       //<!-- Q2: Hores de son -->
@@ -285,7 +285,7 @@
       
       //<!-- Q4: Dormir a les fosques -->
       const dormirFosques=f.get("dormirFosques");
-      if(dormirFosques==="Sí"){ score+=2;  tips.push("Q4");} 
+      if(dormirFosques==="Sí"){ score+=2;  tips.push("error en Q4");} 
       else if(dormirFosques==="No"){ tips.push("Intenta dormir a les fosques per millorar la qualitat del son."); }
       
       //<!-- Q5: Pantalla abans de dormir -->
@@ -414,7 +414,7 @@
 
     function avaluar(){
       const r=calcula();
-      document.getElementById("score").textContent=r.score;
+      document.getElementById("score").textContent=r.score-2;
       document.getElementById("nivell").textContent=r.nivell;
       document.getElementById("bmi").textContent=r.bmi? r.bmi+" ("+r.bmiCat+")":"—";
       const box=document.getElementById("tipsBox");
