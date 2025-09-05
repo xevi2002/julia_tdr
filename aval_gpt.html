@@ -341,7 +341,7 @@
       //<!-- Q14: Àpats al dia -->
       const numApats=Number(f.get("numApats"));
       if(numApats>=3){ score+=2; } 
-      else if(numApats<3){ score +=0; tips.push("És recomanable fer més apats en poca quantitat que menys amb molta quantitat");}
+      else if(numApats>0 && numApats<3){ score +=0; tips.push("És recomanable fer més apats en poca quantitat que menys amb molta quantitat");}
       
       //<!-- Q15: Quedar-se tip -->
       const moltTip=f.get("moltTip");
