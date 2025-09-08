@@ -424,8 +424,8 @@
       const box=document.getElementById("tipsBox");
       const list=document.getElementById("tipsList");
       if(r.tips.length){ box.classList.remove("hidden"); list.innerHTML=""; r.tips.forEach(t=>{const li=document.createElement("li"); li.textContent=t; list.appendChild(li);}); } else { box.classList.add("hidden"); }
-      if (platformType.search("Android")||platformType.search("iPhone")) {documentElement.scrollTop = 0;}
-}
+      if(platformType.search("Android")||platformType.search("iPhone")) {document.documentElement.scrollTop = 0; tips.push("Top1");}
+    }
 
     function netejaForm(){
       document.getElementById("formSalut").reset();
